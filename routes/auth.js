@@ -16,7 +16,7 @@ router.post("/signup",[
             }
         })
     }).normalizeEmail(),
-    body("password").isStrongPassword().trim().notEmpty()
+    body("password").trim().notEmpty()
 ], signup)
 
 router.post("/login", [
